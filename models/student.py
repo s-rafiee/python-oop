@@ -2,12 +2,15 @@ from models.person import Person
 
 
 class Student(Person):
+    number_student = 0
+
     def __init__(self, name, family, gender, age, code, field, college):
         super().__init__(name, family, gender, age)
         self.code = code  # Student Code
         self.field = field
         self.college = college
         self.lessons = []
+        Student.number_student += 1
 
     # Add New Lesson to Student's Lessons.
     def add_Lesson(self, lesson):

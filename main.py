@@ -2,6 +2,7 @@ from models.student import Student
 from models.college import College
 from models.teacher import Teacher
 from models.lesson import Lesson
+from models.person import Person
 
 if __name__ == '__main__':
     # colleges
@@ -30,7 +31,8 @@ if __name__ == '__main__':
     l8 = Lesson("Static", 4, t1, col4)
 
     # Students
-    s1 = Student(name='Samna', family='Rafiee', gender='man', age='26', code=985625, field="computer science", college=col2)
+    s1 = Student(name='Samna', family='Rafiee', gender='man', age='26', code=985625, field="computer science",
+                 college=col2)
     s1.add_Lesson(l1)
     s1.add_Lesson(l3)
     s1.add_Lesson(l4)
@@ -40,5 +42,7 @@ if __name__ == '__main__':
     s1.lessons_info()
     s1.lessons[0].set_score(20)
     s1.lessons_info()
-    # p1.info()
-
+    print('################################')
+    print("Number of Person is:", Person.Number_person)
+    print("Number of Student is:", Student.number_student)
+    print("Number of Teacher is:", Teacher.Number_teacher)
