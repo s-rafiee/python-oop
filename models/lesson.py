@@ -7,12 +7,12 @@ class Lesson:
         self.units = units
         self.teacher = teacher
         self.college = college
-        self._score = None
+        self.__score = None
 
     # Set Score
     def set_score(self, score):
-        self._score = score
+        self.__score = score
 
     # Get Score
     def get_score(self):
-        return self._score
+        return self.__score
